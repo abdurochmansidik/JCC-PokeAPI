@@ -1,4 +1,5 @@
-import Logo from '../../asset/img/logo.png'
+import Logo1 from '../../asset/img/logo1.png'
+import Logo2 from '../../asset/img/logo2.png'
 // import { Link } from 'react-router-dom';
 
 const Navbar = () => {    
@@ -14,13 +15,13 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">Home</a>
+                        <a className="navbar-brand mx-auto" href="/"><img src={Logo2} width="40" alt=""/></a>
                         </li>
                         </ul>
-                        <a className="navbar-brand mx-auto" href="/"><img src={Logo} width="40" alt=""/></a>
+                        <a className="navbar-brand mx-auto" href="/"><img src={Logo1} width="80" alt=""/></a>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">About</a>
+                        <a className="navbar-brand mx-auto" href="/"><img src={Logo2} width="40" alt=""/></a>
                         </li>
                         </ul>
                     </div>
