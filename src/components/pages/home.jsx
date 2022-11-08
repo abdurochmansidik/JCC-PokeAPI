@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../partial/navbar.jsx";
 import Card from "../partial/card";
-import Footer from "../partial/footer.jsx";
   
 function Home () {
   const [allPokemons, setAllPokemons] = useState([]);
@@ -31,35 +29,34 @@ function Home () {
   }, [])
 
   return (
-    <>
-    <Navbar />
+    <div>
     <div className="app-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/800px-International_Pok%C3%A9mon_logo.svg.png" className="img-fluid" alt="Responsive image" style={{width: "300px", paddingBottom: "30px"}}/>
       
       <div className="container">
-      <div className="row w-100">
-        <div className="col-12 d-flex justify-content-between w-100 mb-4">
+        <div className="row w-100">
+          <div className="col-12 d-flex justify-content-between w-100 mb-4">
 
-                                <div className="input-group w-25">
-                                    <button type="button" className="btn btn-primary border-light" style={{backgroundColor: "#FFC107"}}>Cari</button>
-                                    <input type="search" className="form-control" placeholder="Cari Pokemon" aria-label="Search" aria-describedby="search-addon" width="10px"/>
-                                </div>
+              <div className="input-group w-25">
+                  <button type="button" className="btn btn-primary border-light" style={{backgroundColor: "#FFC107"}}>Cari</button>
+                  <input type="search" className="form-control" placeholder="Cari Pokemon" aria-label="Search" aria-describedby="search-addon" width="10px"/>
+              </div>
 
-                                <div className="dropdown d-flex justify-content-end">
-                                <button className="btn btn-secondary dropdown-toggle border-light" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor: "#FFC107"}}>
-                                    Tipe Pokemon
-                                </button>
-                                <ul className="dropdown-menu" style={{fontSize: "14px"}}>
-                                    <li><a className="dropdown-item" href="/">Water</a></li>
-                                    <li><a className="dropdown-item" href="/">Fire</a></li>
-                                    <li><a className="dropdown-item" href="/">Grass</a></li>
-                                    <li><a className="dropdown-item" href="/">Bug</a></li>
-                                </ul>
-                                </div>
-                                </div>
+              <div className="dropdown d-flex justify-content-end">
+              <button className="btn btn-secondary dropdown-toggle border-light" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{backgroundColor: "#FFC107"}}>
+                  Tipe Pokemon
+              </button>
+              <ul className="dropdown-menu" style={{fontSize: "14px"}}>
+                  <li><a className="dropdown-item" href="/">Water</a></li>
+                  <li><a className="dropdown-item" href="/">Fire</a></li>
+                  <li><a className="dropdown-item" href="/">Grass</a></li>
+                  <li><a className="dropdown-item" href="/">Bug</a></li>
+              </ul>
+              </div>
+              </div>
                                 
-                            </div>
-                            </div>
+            </div>
+          </div>
       
       <div className="pokemon-container">
         <div className="all-container mt-3">
@@ -95,8 +92,7 @@ function Home () {
         
       </div>
     </div>
-    <Footer/>
-    </>
+    </div>
   );
 }
   

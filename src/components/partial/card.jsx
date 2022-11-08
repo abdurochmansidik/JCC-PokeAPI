@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Detail from "./detail";
   
-const PokemonThumbnail = ({
+const Card = ({
   id,
   name,
   image,
@@ -31,7 +32,7 @@ const PokemonThumbnail = ({
       </div>
       <img src={image} alt={name} />
       <div className="detail-wrapper">
-        <h5>{name}</h5>
+      <Link to={`/post/${id}`} style={{textDecoration: "none"}}><h5>{name}</h5></Link>
         <h6>Type : {type}</h6>
         {/* <button className="pokeinfo" 
           onClick={() => setShow(!show)}>
@@ -62,4 +63,4 @@ const PokemonThumbnail = ({
   );
 };
   
-export default PokemonThumbnail;
+export default Card;
