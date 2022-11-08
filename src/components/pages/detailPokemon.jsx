@@ -17,9 +17,10 @@ const DetailPokemon = () =>{
             const isipost = response.data;
             setImg(isipost.sprites.other.dream_world.front_default)
             setName(isipost.name)
-            setType(isipost.type)
+            setType(isipost.types[0].type.name)
         })
     }, [id])
+    const style = `thumb-container ${type}`;
 
 
   return(
@@ -32,18 +33,21 @@ const DetailPokemon = () =>{
                             <span className="text-dark fw-semibold text-decoration-none h5">Detail Pokemon</span>
                             <a href="/" className="fw-semibold text-decoration-none h5" style={{color: "#FFC107"}}>Kembali</a>
                         </div>
-
+                        
                         <div className="card h-80 bg-light">
-                            <img src={img} className="card-img-top mt-5" style={{width: "100%", height: "337px"}} alt="..."/>
+                        <div className={style}>
+                            <img src={img} className="card-img-top mt-5" style={{width: "100%", height: "200px"}} alt="..."/>
+                            
                             <div className="card-body">
                                 <h5 className="card-title text-center fw-semibold pb-3" style={{color: "#101010", fontSize: "22px"}}>{name}</h5>
-                                <p className="card-text" style={{fontSize: "17px"}}>{type}</p>
+                                <p className="card-text text-center fw-semibold" style={{fontSize: "17px"}}>Type : {type}</p>
                             </div>
                             <div className="d-flex justify-content-between align-items-center pb-2 mb-2 m-3">
                                 <span className="text-dark fw-semibold text-decoration-none h5">{}</span>
                                 <a href="#!" className="fw-semibold text-decoration-none h5" style={{color: "#D3AC48"}}>{}</a>
                             </div>
 
+                        </div>
                         </div>
                         
                     </div>

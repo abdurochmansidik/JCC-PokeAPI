@@ -3,12 +3,7 @@ import { Link } from "react-router-dom";
 import Detail from "./detail";
   
 const Card = ({
-  id,
-  name,
-  image,
-  type,
-  height,
-  weight,
+  id, name, image, type, height, weight,
   // stat1,
   // stat2,
   // stat3,
